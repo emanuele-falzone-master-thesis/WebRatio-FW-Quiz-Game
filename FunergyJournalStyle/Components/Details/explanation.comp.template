@@ -35,8 +35,8 @@ def subtitle = attrs.find{it["type"] != "blob" && it != title}
 def useEmptyComponentMessage = params["use-empty-component-message"] == "true"
 def emptyComponentMessage = params["empty-component-message"]
 %]
-<div class="<wr:StyleClass/> wr-comp-Details">
-	<div ng-if="view.data" class="list [%= listClass %]">
+<div class="<wr:StyleClass/> expl wr-comp-Details">
+	<div ng-if="view.data" class="list">
 		<wr:Frame>
 			[% if (attrsCount > 0) { %]
 				<div class="item [%= (avatar) ? ((attrsCount > 1) ? "item-avatar" : "item-image") : "" %]">

@@ -75,7 +75,7 @@ if (params["show"].contains("icon") && params["icon"] != "") {
 %]
 <button
 	type="[%= type %]"
-	class="[%= classes.join(" ") %] [%= styleClass %] quit "
+	class="[%= classes.join(" ") %] [%= styleClass %] quit half "
 	ng-click="[%= getEventThrowExpression(event, "{ position: ${position} }") %]"
 >
 	[% if (params["show"].contains("text")) { %]

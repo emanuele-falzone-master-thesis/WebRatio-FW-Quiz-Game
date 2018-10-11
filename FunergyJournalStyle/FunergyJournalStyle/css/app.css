@@ -117,3 +117,21 @@
     background-color:  #588f3e !important;
     color: white !important;
 }
+
+.entire {
+    width: 100%;
+}
+
+.half {
+    width: 48%;
+}
+
+.expl {
+    height: 80%;
+}
+
+.expl div, .expl h2 {
+    background-color: transparent;
+    border: 0;
+    color: black;
+}
