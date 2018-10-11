@@ -17,7 +17,9 @@
       <ConditionalExpression id="av1#scr2#dau1d#sc1d" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="av1#scr2#dau1d#sc1d#kcond1d" name="KeyCondition1" predicate="in" implied="false"/>
       </ConditionalExpression>
-      <DataFlow id="av1#scr2#dau1d#df6d" to="av1#act3" automaticCoupling="true"/>
+      <DataFlow id="av1#scr2#dau1d#df6d" to="av1#act3">
+        <ParameterBinding id="av1#scr2#dau1d#df6d#par3d" source="data.cls8#att4" passing="true" name="oid - PASSING"/>
+      </DataFlow>
     </Details>
   </ViewComponents>
   <layout:Grid containerType="grid">

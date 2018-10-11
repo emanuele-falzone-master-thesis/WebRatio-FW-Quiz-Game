@@ -3,10 +3,15 @@
     <Message gr:x="0" gr:y="175" id="av1#scr3#mssu2" name="Message">
       <Message xml:space="preserve">Wrong</Message>
     </Message>
-    <ViewComponent gr:x="5" gr:y="0" id="av1#scr3#gctu2" name="Actions" eventOrder="av1#scr3#gctu2#oslte3">
+    <ViewComponent gr:x="5" gr:y="0" id="av1#scr3#gctu2" name="Actions" eventOrder="av1#scr3#gctu2#oslte3 av1#scr3#gctu2#oslte2d">
       <Events>
         <OnSelectEvent id="av1#scr3#gctu2#oslte3" name="Quit">
           <NavigationFlow id="av1#scr3#gctu2#oslte3#nf8" to="av1#scr1" automaticCoupling="true"/>
+        </OnSelectEvent>
+        <OnSelectEvent id="av1#scr3#gctu2#oslte2d" name="Explanation">
+          <NavigationFlow id="av1#scr3#gctu2#oslte2d#nf4d" to="av1#scr1d#dau2d">
+            <ParameterBinding id="av1#scr3#gctu2#oslte2d#nf4d#par12d" sourceParameterBinding="av1#act3#erre3#df2d#par4d" target="av1#scr1d#dau2d#sc3d#kcond3d.cls8#att4" name="oid - PASSING - PASSING - KeyCondition3 [oid]"/>
+          </NavigationFlow>
         </OnSelectEvent>
       </Events>
     </ViewComponent>
@@ -50,6 +55,7 @@
       <layout:Cell colspan="10">
         <layout:Component componentId="av1#scr3#gctu2" layout:frameLayout="None" layout:componentLayout="FunergyJournalStyle/result-actions" layout:eventLayout="FunergyJournalStyle/result-event">
           <layout:Event event="av1#scr3#gctu2#oslte3" eventType="OnSelectEvent"/>
+          <layout:Event event="av1#scr3#gctu2#oslte2d" eventType="OnSelectEvent"/>
         </layout:Component>
       </layout:Cell>
       <layout:Cell/>
