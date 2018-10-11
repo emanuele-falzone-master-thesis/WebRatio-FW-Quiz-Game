@@ -166,8 +166,7 @@ if (mode != "label" && mode != "value" && mode != "error") {
 				wr-form-property 
 				ng-options="opt as opt.label for opt in view.options.[%= field["id"] %]"
 				[%= styleClass ? "class='${styleClass}'" : "" %]
-			>
-				<option value="">No selection</option>
+			>S
 			</select>
 	[% } %]
 [% } %]
