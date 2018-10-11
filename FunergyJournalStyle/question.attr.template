@@ -14,7 +14,7 @@ def printAttrMode = { mode ->
 %]
 [% if (mode == "full") { %]
 
-	<div class="item item-attribute [%= styleClass %]">
+	<div class="dark-green item item-attribute [%= styleClass %]">
 		[% printAttrMode("label") %]
 		<p>[% printAttrMode("value") %]</p>
 	</div>

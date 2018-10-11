@@ -3,7 +3,7 @@
 setHTMLOutput()
 def type = event["eventType"] == 'OnSubmitEvent' ? 'submit' : 'button'
 %]
-<button type="[%= type %]" ng-click="[%= getEventThrowExpression(event, "{ position: ${position} }") %]">
+<button type="[%= type %]" class="actions" ng-click="[%= getEventThrowExpression(event, "{ position: ${position} }") %]">
 	<wr:Label context="event"/>
 </button>
 

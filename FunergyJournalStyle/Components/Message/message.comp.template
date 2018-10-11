@@ -32,7 +32,7 @@ def hasEvents = (component.selectSingleNode("layout:Event") != null)
 def useEmptyComponentMessage = params["use-empty-component-message"] == "true"
 def emptyComponentMessage = params["empty-component-message"]
 %]
-<div class="<wr:StyleClass/> wr-comp-Message">
+<div class="<wr:StyleClass/> message wr-comp-Message">
 	<div ng-if="view.messages && view.messages.length" class="list [%= listClass %]">
 		<wr:Frame>
 			<div 

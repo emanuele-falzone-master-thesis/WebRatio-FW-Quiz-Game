@@ -13,7 +13,7 @@ def eventTemplate = getStyle(component) + "/Tab"
 <div class="<wr:StyleClass/> wr-comp-ViewComponent list">
 	<wr:Frame>
 		[% if (hasEvents) { %]
-			<div class="[%= (eventTabs) ? "item " : "" %][%= (params["events-style"] != "none") ? params["events-style"] : "item-buttons" %]">    
+			<div class="[%= (eventTabs) ? "item " : "" %][%= (params["events-style"] != "none") ? params["events-style"] : "item-buttons padded" %]">    
 				<wr:Iterate var="event" context="component" select="layout:Event">
 					[% if (eventTabs && !getLayout(event, LayoutType.EVENT).path.endsWith("Tab")) {
 							throwGenerationException("Use Tab event template for ${event['name']} (${event['id']})")

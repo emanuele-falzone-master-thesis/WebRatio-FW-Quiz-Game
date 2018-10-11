@@ -32,14 +32,15 @@ def hasEvents = (component.selectSingleNode("layout:Event") != null)
 def useEmptyComponentMessage = params["use-empty-component-message"] == "true"
 def emptyComponentMessage = params["empty-component-message"]
 %]
-<div class="<wr:StyleClass/> wr-comp-Message">
+<div class="<wr:StyleClass/> image wr-comp-Message">
 	<div ng-if="view.messages && view.messages.length" class="list [%= listClass %]">
 		<wr:Frame>
 			<div 
 				ng-repeat="msg in view.messages track by $index"
-				class="item item-text-wrap" 
+				class="boy " 
+				 style="background-image:url('../FunergyJournalStyle/images/{{msg}}')"
 				[% if (contentType == "text/html") { %]ng-bind-html="msg" 
-				[% } else { %]ng-bind="msg"[% } %]
+				[% } else { %][% } %]
 			></div>
 			
 			[% if (hasEvents) { %]

@@ -10,7 +10,7 @@ def hasEvents = (component.selectSingleNode("layout:Event") != null)
 
 def eventTemplate = getStyle(component) + "/Tab"
 %]
-<div class="<wr:StyleClass/> wr-comp-ViewComponent list">
+<div class="<wr:StyleClass/> button-quit wr-comp-ViewComponent list">
 	<wr:Frame>
 		[% if (hasEvents) { %]
 			<div class="[%= (eventTabs) ? "item " : "" %][%= (params["events-style"] != "none") ? params["events-style"] : "item-buttons" %]">    

@@ -54,7 +54,7 @@ def hasButtonEvent = events.find{isButtonEvent(it)} != null
 	<div ng-if="view.data && view.data.length" class="list [%= listClass %]">
 		<wr:Frame>
 			<div
-				class="item[% if (imageAttr) { %] item-avatar[% } %][% if (isCheckable) { %] item-checkbox[% } %][% if (selectEvent && StringUtils.isNotBlank(params["event-icon"])) { %] item-icon-right[% } %]"
+				class="item[% if (imageAttr) { %] item-avatar[% } %][% if (isCheckable) { %] item-checkbox[% } %][% if (selectEvent && StringUtils.isNotBlank(params["event-icon"])) { %] answer [% } %]"
 				ng-repeat="current in view.data"
 				[% if (selectEvent) { %]
 					ng-click="[%= getEventThrowExpression(selectEvent, "{ position: \$index }") %]"
@@ -78,7 +78,6 @@ def hasButtonEvent = events.find{isButtonEvent(it)} != null
 				</wr:Iterate>
 				
 				[% if (selectEvent && StringUtils.isNotBlank(params["event-icon"])) { %]
-					<span class="icon ion-[%= params["event-icon"] %]"></span>
 				[% } else if (hasOnRowEvent && !selectEvent) { %]
 					<div class="[%= (eventTabs) ? "item " : "" %][%= (params["events-style"] != "none") ? params["events-style"] : "item-buttons" %]">    
 						<wr:Iterate var="event" context="component" select="layout:Event">
