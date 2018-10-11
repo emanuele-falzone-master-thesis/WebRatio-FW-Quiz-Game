@@ -1,12 +1,15 @@
 <Screen xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1280" gr:y="-160" id="av1#scr1" name="Home" layout:style="FunergyJournalStyle" layout:screenLayout="FunergyJournalStyle/home">
   <ViewComponents>
-    <ViewComponent gr:x="0" gr:y="0" id="av1#scr1#gctu1" name="Actions" eventOrder="av1#scr1#gctu1#oslte1 av1#scr1#gctu1#oslte7d">
+    <ViewComponent gr:x="0" gr:y="0" id="av1#scr1#gctu1" name="Actions" eventOrder="av1#scr1#gctu1#oslte1 av1#scr1#gctu1#oslte7d av1#scr1#gctu1#oslte10d">
       <Events>
         <OnSelectEvent id="av1#scr1#gctu1#oslte1" name="Decode a Card">
           <NavigationFlow id="av1#scr1#gctu1#oslte1#nf1" to="av1#act1" automaticCoupling="true"/>
         </OnSelectEvent>
         <OnSelectEvent id="av1#scr1#gctu1#oslte7d" name="Single Player">
           <NavigationFlow id="av1#scr1#gctu1#oslte7d#nf15d" to="av1#act3d" automaticCoupling="true"/>
+        </OnSelectEvent>
+        <OnSelectEvent id="av1#scr1#gctu1#oslte10d" name="Settings">
+          <NavigationFlow id="av1#scr1#gctu1#oslte10d#nf21d" to="av1#act4d" automaticCoupling="true"/>
         </OnSelectEvent>
       </Events>
     </ViewComponent>
@@ -17,6 +20,7 @@
         <layout:Component componentId="av1#scr1#gctu1" layout:frameLayout="None" layout:eventLayout="FunergyJournalStyle/home-event" layout:componentLayout="FunergyJournalStyle/home-actions">
           <layout:Event event="av1#scr1#gctu1#oslte1" eventType="OnSelectEvent"/>
           <layout:Event event="av1#scr1#gctu1#oslte7d" eventType="OnSelectEvent"/>
+          <layout:Event event="av1#scr1#gctu1#oslte10d" eventType="OnSelectEvent"/>
         </layout:Component>
       </layout:Cell>
       <layout:Cell/>

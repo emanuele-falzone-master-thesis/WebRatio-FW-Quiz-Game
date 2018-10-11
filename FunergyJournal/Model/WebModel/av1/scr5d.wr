@@ -1,0 +1,38 @@
+<Screen xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1280" gr:y="-450" id="av1#scr5d" name="Settings" layout:screenLayout="FunergyJournalStyle/settings">
+  <ViewComponents>
+    <Form gr:x="0" gr:y="0" id="av1#scr5d#enu1d" name="Language" fieldOrder="av1#scr5d#enu1d#sfld1d" eventOrder="av1#scr5d#enu1d#oslte11d">
+      <SelectionField id="av1#scr5d#enu1d#sfld1d" name="language" type="string" modifiable="true" slotOrder="av1#scr5d#enu1d#sfld1d#slot1d av1#scr5d#enu1d#sfld1d#slot2d">
+        <Slot id="av1#scr5d#enu1d#sfld1d#slot1d" name="Slot1" value="English|Italian" label="true"/>
+        <Slot id="av1#scr5d#enu1d#sfld1d#slot2d" name="Slot2" value="en|it" output="true"/>
+      </SelectionField>
+      <Events>
+        <OnSelectEvent id="av1#scr5d#enu1d#oslte11d" name="Save" validate="true">
+          <NavigationFlow id="av1#scr5d#enu1d#oslte11d#nf22d" to="av1#act5d">
+            <ParameterBinding id="av1#scr5d#enu1d#oslte11d#nf22d#par25d" source="av1#scr5d#enu1d#sfld1d" target="av1#act5d.tlads0#ad1d#ipd1d#pdp3d" name="language - language"/>
+          </NavigationFlow>
+        </OnSelectEvent>
+      </Events>
+    </Form>
+  </ViewComponents>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Component componentId="av1#scr5d#enu1d" layout:eventLayout="FunergyJournalStyle/settings-save" layout:componentLayout="FunergyJournalStyle/settings" layout:frameLayout="None" layout:fieldLayout="FunergyJournalStyle/settings">
+          <layout:Field field="av1#scr5d#enu1d#sfld1d"/>
+          <layout:Event event="av1#scr5d#enu1d#oslte11d" eventType="OnSelectEvent"/>
+        </layout:Component>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Screen>
