@@ -23,6 +23,7 @@
     background-color: #e2ecbb;
     color: #588f3e;
     border-color: white;
+    margin-top: 3%;
 }
 
 .question {
@@ -124,6 +125,11 @@
 
 .half {
     width: 48%;
+}
+
+.onethird {
+	width: 32%;
+    font-size: x-small !important;
 }
 
 .expl {
