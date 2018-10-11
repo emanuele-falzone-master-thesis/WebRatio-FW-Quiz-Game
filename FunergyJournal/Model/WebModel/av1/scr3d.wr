@@ -1,0 +1,77 @@
+<Screen xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="av1#scr3d" name="Explanation" layout:screenLayout="FunergyJournalStyle/question" gr:x="2525" gr:y="535">
+  <ViewComponents>
+    <ViewComponent id="av1#scr3d#gctu2d" name="Actions" eventOrder="av1#scr3d#gctu2d#oslte4d av1#scr3d#gctu2d#oslte9d" gr:x="5" gr:y="0">
+      <Events>
+        <OnSelectEvent id="av1#scr3d#gctu2d#oslte4d" name="Back">
+          <NavigationFlow id="av1#scr3d#gctu2d#oslte4d#nf10d" to="av1#scr1" automaticCoupling="true"/>
+        </OnSelectEvent>
+        <OnSelectEvent id="av1#scr3d#gctu2d#oslte9d" name="Continue">
+          <NavigationFlow id="av1#scr3d#gctu2d#oslte9d#nf18d" to="av1#act3d" automaticCoupling="true"/>
+        </OnSelectEvent>
+      </Events>
+    </ViewComponent>
+    <Details id="av1#scr3d#dau4d" name="Explanation" gr:x="0" gr:y="120" dataBinding="cls8" displayAttributes="cls8#att6">
+      <ConditionalExpression id="av1#scr3d#dau4d#sc6d" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="av1#scr3d#dau4d#sc6d#kcond5d" name="KeyCondition3" predicate="in" implied="false"/>
+      </ConditionalExpression>
+    </Details>
+  </ViewComponents>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Component componentId="av1#scr3d#dau4d" layout:frameLayout="None" layout:componentLayout="FunergyJournalStyle/explanation" layout:attributeLayout="FunergyJournalStyle/explanation">
+          <layout:Attribute attribute="cls8#att6"/>
+        </layout:Component>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Component componentId="av1#scr3d#gctu2d" layout:frameLayout="None" layout:componentLayout="FunergyJournalStyle/explanation-actions" layout:eventLayout="FunergyJournalStyle/single-explanation">
+          <layout:Event eventType="OnSelectEvent" event="av1#scr3d#gctu2d#oslte4d"/>
+          <layout:Event event="av1#scr3d#gctu2d#oslte9d" eventType="OnSelectEvent"/>
+        </layout:Component>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Events>
+    <BackEvent id="av1#scr3d#bke3d">
+      <NavigationFlow id="av1#scr3d#bke3d#nf11d" to="av1#scr1" automaticCoupling="true"/>
+    </BackEvent>
+  </Events>
+</Screen>

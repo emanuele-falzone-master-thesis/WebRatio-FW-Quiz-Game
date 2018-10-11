@@ -1,0 +1,110 @@
+<Screen xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="av1#scr4d" name="Results" layout:screenLayout="FunergyJournalStyle/question" gr:x="2180" gr:y="520">
+  <ViewComponents>
+    <Message id="av1#scr4d#mssu1d" name="Message" gr:x="0" gr:y="175">
+      <Message xml:space="preserve">Wrong</Message>
+    </Message>
+    <ViewComponent id="av1#scr4d#gctu3d" name="Actions" eventOrder="av1#scr4d#gctu3d#oslte5d av1#scr4d#gctu3d#oslte6d av1#scr4d#gctu3d#oslte8d" gr:x="5" gr:y="0">
+      <Events>
+        <OnSelectEvent id="av1#scr4d#gctu3d#oslte5d" name="Quit">
+          <NavigationFlow id="av1#scr4d#gctu3d#oslte5d#nf12d" to="av1#scr1" automaticCoupling="true"/>
+        </OnSelectEvent>
+        <OnSelectEvent id="av1#scr4d#gctu3d#oslte6d" name="Explanation">
+          <NavigationFlow id="av1#scr4d#gctu3d#oslte6d#nf13d" to="av1#scr3d#dau4d">
+            <ParameterBinding id="av1#scr4d#gctu3d#oslte6d#nf13d#par22d" name="oid - PASSING - PASSING - KeyCondition3 [oid]" sourceParameterBinding="av1#act1d#erre1d#df9d#par18d" target="av1#scr3d#dau4d#sc6d#kcond5d.cls8#att4"/>
+          </NavigationFlow>
+        </OnSelectEvent>
+        <OnSelectEvent id="av1#scr4d#gctu3d#oslte8d" name="Continue">
+          <NavigationFlow id="av1#scr4d#gctu3d#oslte8d#nf17d" to="av1#act3d" automaticCoupling="true"/>
+        </OnSelectEvent>
+      </Events>
+    </ViewComponent>
+    <Message id="av1#scr4d#mssu2d" name="Image" gr:x="5" gr:y="90"/>
+  </ViewComponents>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell colspan="10">
+        <layout:Component componentId="av1#scr4d#mssu2d" layout:frameLayout="None" layout:componentLayout="FunergyJournalStyle/image"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell colspan="10">
+        <layout:Component componentId="av1#scr4d#mssu1d" layout:frameLayout="None" layout:componentLayout="FunergyJournalStyle/message"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell colspan="10">
+        <layout:Component componentId="av1#scr4d#gctu3d" layout:frameLayout="None" layout:componentLayout="FunergyJournalStyle/result-actions" layout:eventLayout="FunergyJournalStyle/single-result">
+          <layout:Event eventType="OnSelectEvent" event="av1#scr4d#gctu3d#oslte5d"/>
+          <layout:Event eventType="OnSelectEvent" event="av1#scr4d#gctu3d#oslte6d"/>
+          <layout:Event event="av1#scr4d#gctu3d#oslte8d" eventType="OnSelectEvent"/>
+        </layout:Component>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Events>
+    <BackEvent id="av1#scr4d#bke4d">
+      <NavigationFlow id="av1#scr4d#bke4d#nf14d" to="av1#scr1" automaticCoupling="true"/>
+    </BackEvent>
+  </Events>
+</Screen>

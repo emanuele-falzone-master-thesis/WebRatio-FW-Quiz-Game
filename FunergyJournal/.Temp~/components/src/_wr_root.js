@@ -7,11 +7,11 @@
 	import * as mod1 from "wrm\/comp\/MessageService";
 	wrm.defineModule("wrm\/comp\/MessageService", mod1)
 
-	import * as mod2 from "wrm\/comp\/ListService";
-	wrm.defineModule("wrm\/comp\/ListService", mod2)
+	import * as mod2 from "wrm\/comp\/DetailsService";
+	wrm.defineModule("wrm\/comp\/DetailsService", mod2)
 
-	import * as mod3 from "wrm\/comp\/DetailsService";
-	wrm.defineModule("wrm\/comp\/DetailsService", mod3)
+	import * as mod3 from "wrm\/comp\/ListService";
+	wrm.defineModule("wrm\/comp\/ListService", mod3)
 
 	import * as mod4 from "wrm\/comp\/SelectorService";
 	wrm.defineModule("wrm\/comp\/SelectorService", mod4)

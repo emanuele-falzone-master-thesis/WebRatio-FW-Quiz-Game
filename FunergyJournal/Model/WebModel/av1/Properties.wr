@@ -40,4 +40,45 @@
       </ErrorEvent>
     </Events>
   </Action>
+  <Action id="av1#act1d" definition="tlads0#ad4" gr:x="1620" gr:y="675">
+    <Events>
+      <SuccessEvent id="av1#act1d#scce1d" definition="tlads0#ad4#spd4" gr:pinned="true" gr:side="4" gr:pos="9">
+        <NavigationFlow id="av1#act1d#scce1d#nf5d" to="av1#scr4d#mssu1d">
+          <ParameterBinding id="av1#act1d#scce1d#nf5d#par13d" name="&quot;Correct&quot; - Shown Messages" target="messages" sourceValue="Great! Your answer is CORRECT!"/>
+        </NavigationFlow>
+        <DataFlow id="av1#act1d#scce1d#df4d" to="av1#scr4d#mssu2d">
+          <ParameterBinding id="av1#act1d#scce1d#df4d#par14d" name="&quot;boy-correct.png&quot; - Shown Messages" target="messages" sourceValue="boy-correct.png"/>
+        </DataFlow>
+        <DataFlow id="av1#act1d#scce1d#df7d" to="av1#scr4d#gctu3d">
+          <ParameterBinding id="av1#act1d#scce1d#df7d#par15d" name="oid - PASSING - PASSING" sourceParameterBinding="av1#scr2d#dau3d#df10d#par20d" passing="true"/>
+        </DataFlow>
+      </SuccessEvent>
+      <ErrorEvent id="av1#act1d#erre1d" definition="tlads0#ad4#epd4" gr:pinned="true" gr:side="0" gr:pos="9">
+        <NavigationFlow id="av1#act1d#erre1d#nf6d" to="av1#scr4d#mssu1d">
+          <ParameterBinding id="av1#act1d#erre1d#nf6d#par16d" name="&quot;Wrong&quot; - Shown Messages" target="messages" sourceValue="Oh no! Your answer is WRONG!"/>
+        </NavigationFlow>
+        <DataFlow id="av1#act1d#erre1d#df8d" to="av1#scr4d#mssu2d">
+          <ParameterBinding id="av1#act1d#erre1d#df8d#par17d" name="&quot;boy-wrong.png&quot; - Shown Messages" target="messages" sourceValue="boy-wrong.png"/>
+        </DataFlow>
+        <DataFlow id="av1#act1d#erre1d#df9d" to="av1#scr4d#gctu3d">
+          <ParameterBinding id="av1#act1d#erre1d#df9d#par18d" name="oid - PASSING - PASSING" sourceParameterBinding="av1#scr2d#dau3d#df10d#par20d" passing="true"/>
+        </DataFlow>
+      </ErrorEvent>
+    </Events>
+  </Action>
+  <Action id="av1#act3d" definition="tlads0#ad3" gr:x="1815" gr:y="25">
+    <Events>
+      <SuccessEvent id="av1#act3d#scce3d" definition="tlads0#ad3#spd3" gr:pinned="true" gr:side="5" gr:pos="0">
+        <DataFlow id="av1#act3d#scce3d#df11d" to="av1#scr2d#pwu1d">
+          <ParameterBinding id="av1#act3d#scce3d#df11d#par21d" name="question_id - question_id" source="tlads0#ad3#spd3#pdp5" target="av1#scr2d#pwu1d#sc4d#acond1d"/>
+        </DataFlow>
+        <NavigationFlow id="av1#act3d#scce3d#nf16d" to="av1#scr2d#dau3d">
+          <ParameterBinding id="av1#act3d#scce3d#nf16d#par23d" source="tlads0#ad3#spd3#pdp4" target="av1#scr2d#dau3d#sc5d#kcond4d.cls8#att4" name="oid - KeyCondition1 [oid]"/>
+        </NavigationFlow>
+      </SuccessEvent>
+      <ErrorEvent id="av1#act3d#erre3d" definition="tlads0#ad3#epd3" gr:pinned="true" gr:side="4" gr:pos="2">
+        <NavigationFlow id="av1#act3d#erre3d#nf9d" to="av1#scr1" automaticCoupling="true"/>
+      </ErrorEvent>
+    </Events>
+  </Action>
 </AppView>
