@@ -1,0 +1,35 @@
+<DomainModel xmlns:gr="http://www.webratio.com/2006/WebML/Graph" dataSyncOnReopen="true">
+  <Class gr:x="150" gr:y="160" id="MUser" name="App User" singleton="true" duration="persistent" attributeOrder="mUserOID mUsername">
+    <Attribute id="mUserOID" key="true" name="oid" type="integer" specialBehavior="implicitOid"/>
+    <Attribute id="mUsername" name="username" type="string"/>
+    <Comment xml:space="preserve">App User represents the current user of the mobile application. The user is identified by username. For security reasons, other information, such as the password, is not stored here but in the device account manager. You are free to add any additional attribute to this class.  When using the Mobile Project in combination with a Data Service project, this class must be mapped on the remote User class, and thus inherits its attributes.</Comment>
+  </Class>
+  <Class gr:x="450" gr:y="170" id="MRole" name="App Role" duration="persistent" attributeOrder="mRoleOID mRoleName">
+    <Attribute id="mRoleOID" key="true" name="oid" type="integer" specialBehavior="implicitOid"/>
+    <Attribute id="mRoleName" name="name" type="string"/>
+    <Comment xml:space="preserve">App Role represents an application role belonging to the current user of the mobile application. When the Mobile Project is used in combination with a Data Service project, the list of roles is automatically retrieved from remote at the login.</Comment>
+  </Class>
+  <Association id="MUser2MRole_MRole2MUser" sourceClass="MUser" targetClass="MRole">
+    <AssociationRole1 id="MUser2MRole" name="AppUserToAppRole" maxCard="N"/>
+    <AssociationRole2 id="MRole2MUser" name="AppRoleToAppUser" maxCard="1"/>
+  </Association>
+  <Class id="cls8" name="Question" duration="persistent" attributeOrder="cls8#att4 cls8#att9 cls8#att7 cls8#att6 cls8#att10" gr:x="150" gr:y="380">
+    <Attribute id="cls8#att4" name="oid" key="true" specialBehavior="implicitOid" type="integer"/>
+    <Attribute id="cls8#att6" name="explanation" type="string"/>
+    <Attribute id="cls8#att7" name="language" type="string"/>
+    <Attribute id="cls8#att9" name="content" type="string"/>
+    <Attribute id="cls8#att10" name="question_id" type="integer"/>
+  </Class>
+  <Class id="cls9" name="Answer" duration="persistent" attributeOrder="cls9#att11 cls9#att14 cls9#att13 cls9#att12" gr:x="410" gr:y="295">
+    <Attribute id="cls9#att11" name="oid" key="true" specialBehavior="implicitOid" type="integer"/>
+    <Attribute id="cls9#att12" name="question_id" type="integer"/>
+    <Attribute id="cls9#att13" name="correctness" type="boolean"/>
+    <Attribute id="cls9#att14" name="content" type="string"/>
+  </Class>
+  <Class gr:x="485" gr:y="525" id="cls1" name="Status" duration="persistent" attributeOrder="cls1#att1 cls1#att2 cls1#att3 cls1#att1d">
+    <Attribute id="cls1#att1" key="true" name="oid" type="integer" specialBehavior="implicitOid"/>
+    <Attribute id="cls1#att2" name="question_id" type="integer"/>
+    <Attribute id="cls1#att3" name="level" type="integer"/>
+    <Attribute id="cls1#att1d" name="language" type="string"/>
+  </Class>
+</DomainModel>

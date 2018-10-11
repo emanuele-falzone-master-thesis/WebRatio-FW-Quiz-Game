@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="com.webratio.ide.deploy.core.AndroidMobileLaunchConfigurationType">
+<stringAttribute key="main.androidTargetDevices" value="phone|tablet"/>
+<stringAttribute key="main.appId" value="com.mycompany.funergyjournal"/>
+<stringAttribute key="main.appName" value="FunergyJournal"/>
+<stringAttribute key="main.appVersion" value="0.0.1"/>
+<stringAttribute key="main.buildMode" value="debug"/>
+<stringAttribute key="model.general.outputPath" value="${mobileapps_loc}/${project_name}"/>
+<mapAttribute key="tasks.task0">
+<mapEntry key="type" value="Clear Deployment Folder"/>
+</mapAttribute>
+<mapAttribute key="tasks.task1">
+<mapEntry key="stopOnErrors" value="true"/>
+<mapEntry key="type" value="Generate Mobile App Code"/>
+</mapAttribute>
+<mapAttribute key="tasks.task2">
+<mapEntry key="type" value="Build Mobile App"/>
+</mapAttribute>
+</launchConfiguration>

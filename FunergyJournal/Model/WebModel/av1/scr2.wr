@@ -1,0 +1,81 @@
+<Screen xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="105" gr:y="70" id="av1#scr2" name="Decode A Card" layout:screenLayout="FunergyJournalStyle/question">
+  <ViewComponents>
+    <List gr:x="0" gr:y="135" id="av1#scr2#pwu1" name="Answers" checkable="false" dataBinding="cls9" displayAttributes="cls9#att14" eventOrder="av1#scr2#pwu1#oslte2">
+      <ConditionalExpression id="av1#scr2#pwu1#sc2" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="av1#scr2#pwu1#sc2#acond2" name="question_id" predicate="eq" booleanOperator="or" implied="false" attributes="cls9#att12"/>
+      </ConditionalExpression>
+      <SortAttribute attribute="cls9#att14" order="ascending"/>
+      <Events>
+        <OnSelectEvent id="av1#scr2#pwu1#oslte2" name="Answer Select" validate="true">
+          <NavigationFlow id="av1#scr2#pwu1#oslte2#nf5" to="av1#act3">
+            <ParameterBinding id="av1#scr2#pwu1#oslte2#nf5#par15" source="data.cls9#att13" target="av1#act3.tlads0#ad4#ipd4#pdp7" name="correctness - correctness"/>
+          </NavigationFlow>
+        </OnSelectEvent>
+      </Events>
+    </List>
+    <Details gr:x="5" gr:y="0" id="av1#scr2#dau1d" name="Question" dataBinding="cls8" displayAttributes="cls8#att9">
+      <ConditionalExpression id="av1#scr2#dau1d#sc1d" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="av1#scr2#dau1d#sc1d#kcond1d" name="KeyCondition1" predicate="in" implied="false"/>
+      </ConditionalExpression>
+      <DataFlow id="av1#scr2#dau1d#df6d" to="av1#act3" automaticCoupling="true"/>
+    </Details>
+  </ViewComponents>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell colspan="10">
+        <layout:Component componentId="av1#scr2#dau1d" layout:componentLayout="FunergyJournalStyle/question" layout:frameLayout="None" layout:attributeLayout="FunergyJournalStyle/question">
+          <layout:Attribute attribute="cls8#att9"/>
+        </layout:Component>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell colspan="10">
+        <layout:Component componentId="av1#scr2#pwu1" layout:frameLayout="None" layout:componentLayout="FunergyJournalStyle/answers">
+          <layout:Attribute attribute="cls9#att14"/>
+          <layout:Event event="av1#scr2#pwu1#oslte2" eventType="OnSelectEvent"/>
+        </layout:Component>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Events>
+    <BackEvent id="av1#scr2#bke2" gr:pinned="true" gr:side="1" gr:pos="0">
+      <NavigationFlow id="av1#scr2#bke2#nf4" to="av1#scr1" automaticCoupling="true"/>
+    </BackEvent>
+  </Events>
+</Screen>

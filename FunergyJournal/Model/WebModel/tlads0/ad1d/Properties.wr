@@ -1,0 +1,40 @@
+<ActionDefinition xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="tlads0#ad1d" name="Update Status language" defaultSuccessPortDefinition="tlads0#ad1d#spd1d" defaultErrorPortDefinition="tlads0#ad1d#epd1d">
+  <Operations>
+    <Update id="tlads0#ad1d#mfu1d" gr:x="360" gr:y="180" dataBinding="cls1">
+      <ConditionalExpression id="tlads0#ad1d#mfu1d#sc2d" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="tlads0#ad1d#mfu1d#sc2d#kcond2d" name="KeyCondition1" predicate="in" implied="false"/>
+      </ConditionalExpression>
+      <SuccessFlow id="tlads0#ad1d#mfu1d#sf3d" to="tlads0#ad1d#chnglcl1d" automaticCoupling="true"/>
+      <ErrorFlow id="tlads0#ad1d#mfu1d#ef2d" to="tlads0#ad1d#epd1d" automaticCoupling="true"/>
+    </Update>
+    <ChangeLocale gr:x="625" gr:y="50" id="tlads0#ad1d#chnglcl1d" name="ChangeLocale">
+      <SuccessFlow id="tlads0#ad1d#chnglcl1d#sf4d" to="tlads0#ad1d#spd1d" automaticCoupling="true"/>
+      <ErrorFlow id="tlads0#ad1d#chnglcl1d#ef3d" to="tlads0#ad1d#epd1d" automaticCoupling="true"/>
+    </ChangeLocale>
+  </Operations>
+  <InputPortDefinition id="tlads0#ad1d#ipd1d" gr:x="0" gr:y="30">
+    <PortDefinitionParameter id="tlads0#ad1d#ipd1d#pdp3d" name="language"/>
+    <SuccessFlow id="tlads0#ad1d#ipd1d#sf1d" to="tlads0#ad1d#act2d" automaticCoupling="true"/>
+    <DataFlow id="tlads0#ad1d#ipd1d#df1d" to="tlads0#ad1d#mfu1d">
+      <ParameterBinding id="tlads0#ad1d#ipd1d#df1d#par8d" source="tlads0#ad1d#ipd1d#pdp3d" target="cls1#att1d" name="language - language"/>
+    </DataFlow>
+    <DataFlow id="tlads0#ad1d#ipd1d#df5d" to="tlads0#ad1d#chnglcl1d">
+      <ParameterBinding id="tlads0#ad1d#ipd1d#df5d#par9d" source="tlads0#ad1d#ipd1d#pdp3d" target="countryISO" name="language - Country ISO"/>
+      <ParameterBinding id="tlads0#ad1d#ipd1d#df5d#par10d" source="tlads0#ad1d#ipd1d#pdp3d" target="languageISO" name="language - Language ISO"/>
+    </DataFlow>
+  </InputPortDefinition>
+  <SuccessPortDefinition id="tlads0#ad1d#spd1d" name="Success Port" gr:x="0" gr:y="30"/>
+  <ErrorPortDefinition id="tlads0#ad1d#epd1d" name="Error Port" gr:x="0" gr:y="300"/>
+  <Action id="tlads0#ad1d#act2d" gr:x="340" gr:y="495" definition="tlads0#ad6">
+    <Events>
+      <SuccessEvent id="tlads0#ad1d#act2d#scce2d" definition="tlads0#ad6#spd6">
+        <SuccessFlow id="tlads0#ad1d#act2d#scce2d#sf2d" to="tlads0#ad1d#mfu1d">
+          <ParameterBinding id="tlads0#ad1d#act2d#scce2d#sf2d#par7d" source="tlads0#ad6#spd6#pdp19" target="tlads0#ad1d#mfu1d#sc2d#kcond2d.cls1#att1" name="oid - KeyCondition1 [oid]"/>
+        </SuccessFlow>
+      </SuccessEvent>
+      <ErrorEvent id="tlads0#ad1d#act2d#erre2d" definition="tlads0#ad6#epd6">
+        <ErrorFlow id="tlads0#ad1d#act2d#erre2d#ef1d" to="tlads0#ad1d#epd1d" automaticCoupling="true"/>
+      </ErrorEvent>
+    </Events>
+  </Action>
+</ActionDefinition>

@@ -1,0 +1,32 @@
+<ActionDefinition xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="tlads0#ad10" name="Update Status question_id" defaultSuccessPortDefinition="tlads0#ad10#spd10" defaultErrorPortDefinition="tlads0#ad10#epd10">
+  <Operations>
+    <Update id="tlads0#ad10#mfu3" gr:x="335" gr:y="0" dataBinding="cls1">
+      <ConditionalExpression id="tlads0#ad10#mfu3#sc10" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="tlads0#ad10#mfu3#sc10#kcond3" name="KeyCondition1" predicate="in" implied="false"/>
+      </ConditionalExpression>
+      <SuccessFlow id="tlads0#ad10#mfu3#sf44" to="tlads0#ad10#spd10" automaticCoupling="true"/>
+      <ErrorFlow id="tlads0#ad10#mfu3#ef20" to="tlads0#ad10#epd10" automaticCoupling="true"/>
+    </Update>
+  </Operations>
+  <InputPortDefinition id="tlads0#ad10#ipd10" gr:x="0" gr:y="30">
+    <SuccessFlow id="tlads0#ad10#ipd10#sf43" to="tlads0#ad10#act9" automaticCoupling="true"/>
+    <PortDefinitionParameter id="tlads0#ad10#ipd10#pdp21" name="question_id"/>
+    <DataFlow id="tlads0#ad10#ipd10#df9" to="tlads0#ad10#mfu3">
+      <ParameterBinding id="tlads0#ad10#ipd10#df9#par43" source="tlads0#ad10#ipd10#pdp21" target="cls1#att2" name="question_id - question_id"/>
+    </DataFlow>
+  </InputPortDefinition>
+  <SuccessPortDefinition id="tlads0#ad10#spd10" name="Success Port" gr:x="0" gr:y="30"/>
+  <ErrorPortDefinition id="tlads0#ad10#epd10" name="Error Port" gr:x="0" gr:y="300"/>
+  <Action id="tlads0#ad10#act9" definition="tlads0#ad6" gr:x="0" gr:y="165">
+    <Events>
+      <SuccessEvent id="tlads0#ad10#act9#scce9" definition="tlads0#ad6#spd6">
+        <SuccessFlow id="tlads0#ad10#act9#scce9#sf42" to="tlads0#ad10#mfu3">
+          <ParameterBinding id="tlads0#ad10#act9#scce9#sf42#par42" name="oid - KeyCondition1 [oid]" source="tlads0#ad6#spd6#pdp19" target="tlads0#ad10#mfu3#sc10#kcond3.cls1#att1"/>
+        </SuccessFlow>
+      </SuccessEvent>
+      <ErrorEvent id="tlads0#ad10#act9#erre9" definition="tlads0#ad6#epd6">
+        <ErrorFlow id="tlads0#ad10#act9#erre9#ef19" to="tlads0#ad10#epd10" automaticCoupling="true"/>
+      </ErrorEvent>
+    </Events>
+  </Action>
+</ActionDefinition>

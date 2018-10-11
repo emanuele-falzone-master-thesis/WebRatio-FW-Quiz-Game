@@ -1,0 +1,33 @@
+<ActionDefinition xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="tlads0#ad6" name="Read Status" defaultSuccessPortDefinition="tlads0#ad6#spd6" defaultErrorPortDefinition="tlads0#ad6#epd6">
+  <Operations>
+    <Selector gr:x="465" gr:y="75" id="tlads0#ad6#seu3" maxResults="1" dataBinding="cls1" distinctAttributes="cls1#att2 cls1#att3">
+      <SuccessFlow id="tlads0#ad6#seu3#sf28" to="tlads0#ad6#spd6">
+        <ParameterBinding id="tlads0#ad6#seu3#sf28#par11" source="data.cls1#att3" target="tlads0#ad6#spd6#pdp1" name="level - level"/>
+        <ParameterBinding id="tlads0#ad6#seu3#sf28#par16" source="data.cls1#att2" target="tlads0#ad6#spd6#pdp2" name="question_id - question_id"/>
+        <ParameterBinding id="tlads0#ad6#seu3#sf28#par38" source="data.cls1#att1" target="tlads0#ad6#spd6#pdp19" name="oid - oid"/>
+        <ParameterBinding id="tlads0#ad6#seu3#sf28#par1d" source="data.cls1#att1d" target="tlads0#ad6#spd6#pdp2d" name="language - language"/>
+      </SuccessFlow>
+      <ErrorFlow id="tlads0#ad6#seu3#ef11" to="tlads0#ad6#epd6" automaticCoupling="true"/>
+    </Selector>
+  </Operations>
+  <InputPortDefinition id="tlads0#ad6#ipd6" gr:x="0" gr:y="30">
+    <SuccessFlow id="tlads0#ad6#ipd6#sf21" to="tlads0#ad6#act4" automaticCoupling="true"/>
+  </InputPortDefinition>
+  <SuccessPortDefinition id="tlads0#ad6#spd6" name="Success Port" gr:x="0" gr:y="30">
+    <PortDefinitionParameter id="tlads0#ad6#spd6#pdp1" name="level"/>
+    <PortDefinitionParameter id="tlads0#ad6#spd6#pdp2" name="question_id"/>
+    <PortDefinitionParameter id="tlads0#ad6#spd6#pdp19" name="oid"/>
+    <PortDefinitionParameter id="tlads0#ad6#spd6#pdp2d" name="language"/>
+  </SuccessPortDefinition>
+  <ErrorPortDefinition id="tlads0#ad6#epd6" name="Error Port" gr:x="0" gr:y="300"/>
+  <Action id="tlads0#ad6#act4" gr:x="80" gr:y="90" definition="tlads0#ad1">
+    <Events>
+      <SuccessEvent id="tlads0#ad6#act4#scce4" definition="tlads0#ad1#spd1">
+        <SuccessFlow id="tlads0#ad6#act4#scce4#sf36" to="tlads0#ad6#seu3" automaticCoupling="true"/>
+      </SuccessEvent>
+      <ErrorEvent id="tlads0#ad6#act4#erre4" definition="tlads0#ad1#epd1">
+        <ErrorFlow id="tlads0#ad6#act4#erre4#ef16" to="tlads0#ad6#epd6" automaticCoupling="true" gr:bendpoints="107.0 100.0"/>
+      </ErrorEvent>
+    </Events>
+  </Action>
+</ActionDefinition>

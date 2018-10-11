@@ -1,0 +1,20 @@
+<WebModel defaultLocale="lcl1" edtLvl="Mobile Platform Professional Edition # 20180925" edtLvlCtrl="TW9iaWxlIFBsYXRmb3JtIFByb2Zlc3Npb25hbCBFZGl0aW9uICMgMjAxODA5MjU=">
+  <Locale id="lcl1" language="en">
+    <PatternConfiguration deviceDefault="true" type="boolean" pattern="yes|no"/>
+    <PatternConfiguration deviceDefault="true" type="decimal" useNumberPattern="false" maxDecimal="3" minDecimal="0" minInteger="1" useThousandSeparator="true"/>
+    <PatternConfiguration deviceDefault="true" type="date" pattern="M/d/yy"/>
+    <PatternConfiguration deviceDefault="true" type="float" useNumberPattern="false" maxDecimal="3" minDecimal="0" minInteger="1" useThousandSeparator="true"/>
+    <PatternConfiguration deviceDefault="true" type="integer" useNumberPattern="false" minInteger="1" useThousandSeparator="true"/>
+    <PatternConfiguration deviceDefault="true" type="time" pattern="h:mm:ss a"/>
+    <PatternConfiguration deviceDefault="true" type="timestamp" pattern="M/d/yy h:mm:ss a"/>
+  </Locale>
+  <Locale id="lcl1d" country="IT" language="it">
+    <PatternConfiguration type="date" pattern="dd/MM/yy" deviceDefault="true"/>
+    <PatternConfiguration type="boolean" pattern="si|no" deviceDefault="true"/>
+    <PatternConfiguration type="integer" minInteger="1" useThousandSeparator="true" deviceDefault="true"/>
+    <PatternConfiguration type="time" pattern="H.mm.ss" deviceDefault="true"/>
+    <PatternConfiguration type="decimal" maxDecimal="3" minDecimal="0" minInteger="1" useThousandSeparator="true" deviceDefault="true"/>
+    <PatternConfiguration type="float" maxDecimal="3" minDecimal="0" minInteger="1" useThousandSeparator="true" deviceDefault="true"/>
+    <PatternConfiguration type="timestamp" pattern="dd/MM/yy H.mm.ss" deviceDefault="true"/>
+  </Locale>
+</WebModel>

@@ -1,0 +1,19 @@
+<ActionDefinition xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="tlads0#ad4" name="Validate Answer" defaultSuccessPortDefinition="tlads0#ad4#spd4" defaultErrorPortDefinition="tlads0#ad4#epd4">
+  <Operations>
+    <Switch gr:x="305" gr:y="60" id="tlads0#ad4#switch3" name="Check">
+      <SuccessFlow id="tlads0#ad4#switch3#sf7" to="tlads0#ad4#spd4" automaticCoupling="true" code="true"/>
+      <Case value="true"/>
+      <Case value="false"/>
+      <SuccessFlow id="tlads0#ad4#switch3#sf8" to="tlads0#ad4#epd4" automaticCoupling="true" code="false"/>
+      <SuccessFlow id="tlads0#ad4#switch3#sf5d" to="tlads0#ad4#epd4" automaticCoupling="true"/>
+    </Switch>
+  </Operations>
+  <InputPortDefinition id="tlads0#ad4#ipd4" gr:x="0" gr:y="30">
+    <PortDefinitionParameter id="tlads0#ad4#ipd4#pdp7" name="correctness"/>
+    <SuccessFlow id="tlads0#ad4#ipd4#sf6" to="tlads0#ad4#switch3">
+      <ParameterBinding id="tlads0#ad4#ipd4#sf6#par2d" source="tlads0#ad4#ipd4#pdp7" target="switch" name="correctness - Switch"/>
+    </SuccessFlow>
+  </InputPortDefinition>
+  <SuccessPortDefinition id="tlads0#ad4#spd4" name="Success Port" gr:x="0" gr:y="30"/>
+  <ErrorPortDefinition id="tlads0#ad4#epd4" name="Error Port" gr:x="0" gr:y="150"/>
+</ActionDefinition>

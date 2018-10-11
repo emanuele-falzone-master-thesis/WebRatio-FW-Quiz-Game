@@ -1,0 +1,32 @@
+<ActionDefinition xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="tlads0#ad9" name="Update Status level" defaultSuccessPortDefinition="tlads0#ad9#spd9" defaultErrorPortDefinition="tlads0#ad9#epd9">
+  <Operations>
+    <Update gr:x="480" gr:y="5" id="tlads0#ad9#mfu1" dataBinding="cls1">
+      <ConditionalExpression id="tlads0#ad9#mfu1#sc8" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="tlads0#ad9#mfu1#sc8#kcond1" name="KeyCondition1" predicate="in" implied="false"/>
+      </ConditionalExpression>
+      <ErrorFlow id="tlads0#ad9#mfu1#ef18" to="tlads0#ad9#epd9" automaticCoupling="true"/>
+      <SuccessFlow id="tlads0#ad9#mfu1#sf41" to="tlads0#ad9#spd9" automaticCoupling="true"/>
+    </Update>
+  </Operations>
+  <InputPortDefinition id="tlads0#ad9#ipd9" gr:x="0" gr:y="30">
+    <PortDefinitionParameter id="tlads0#ad9#ipd9#pdp20" name="level"/>
+    <SuccessFlow id="tlads0#ad9#ipd9#sf39" to="tlads0#ad9#act8" automaticCoupling="true"/>
+    <DataFlow id="tlads0#ad9#ipd9#df8" to="tlads0#ad9#mfu1">
+      <ParameterBinding id="tlads0#ad9#ipd9#df8#par41" source="tlads0#ad9#ipd9#pdp20" target="cls1#att3" name="level - level"/>
+    </DataFlow>
+  </InputPortDefinition>
+  <SuccessPortDefinition id="tlads0#ad9#spd9" name="Success Port" gr:x="0" gr:y="30"/>
+  <ErrorPortDefinition id="tlads0#ad9#epd9" name="Error Port" gr:x="0" gr:y="300"/>
+  <Action id="tlads0#ad9#act8" gr:x="245" gr:y="170" definition="tlads0#ad6">
+    <Events>
+      <SuccessEvent id="tlads0#ad9#act8#scce8" definition="tlads0#ad6#spd6">
+        <SuccessFlow id="tlads0#ad9#act8#scce8#sf40" to="tlads0#ad9#mfu1">
+          <ParameterBinding id="tlads0#ad9#act8#scce8#sf40#par40" source="tlads0#ad6#spd6#pdp19" target="tlads0#ad9#mfu1#sc8#kcond1.cls1#att1" name="oid - KeyCondition1 [oid]"/>
+        </SuccessFlow>
+      </SuccessEvent>
+      <ErrorEvent id="tlads0#ad9#act8#erre8" definition="tlads0#ad6#epd6">
+        <ErrorFlow id="tlads0#ad9#act8#erre8#ef17" to="tlads0#ad9#epd9" automaticCoupling="true" gr:bendpoints="111.0 57.0"/>
+      </ErrorEvent>
+    </Events>
+  </Action>
+</ActionDefinition>

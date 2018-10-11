@@ -1,0 +1,100 @@
+<Screen xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="695" gr:y="320" id="av1#scr3" name="Results" layout:screenLayout="FunergyJournalStyle/question">
+  <ViewComponents>
+    <Message gr:x="0" gr:y="175" id="av1#scr3#mssu2" name="Message">
+      <Message xml:space="preserve">Wrong</Message>
+    </Message>
+    <ViewComponent gr:x="5" gr:y="0" id="av1#scr3#gctu2" name="Actions" eventOrder="av1#scr3#gctu2#oslte3">
+      <Events>
+        <OnSelectEvent id="av1#scr3#gctu2#oslte3" name="Quit">
+          <NavigationFlow id="av1#scr3#gctu2#oslte3#nf8" to="av1#scr1" automaticCoupling="true"/>
+        </OnSelectEvent>
+      </Events>
+    </ViewComponent>
+    <Message gr:x="5" gr:y="90" id="av1#scr3#mssu1" name="Image"/>
+  </ViewComponents>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell colspan="10">
+        <layout:Component componentId="av1#scr3#mssu1" layout:frameLayout="None" layout:componentLayout="FunergyJournalStyle/image"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell colspan="10">
+        <layout:Component componentId="av1#scr3#mssu2" layout:frameLayout="None" layout:componentLayout="FunergyJournalStyle/message"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell colspan="10">
+        <layout:Component componentId="av1#scr3#gctu2" layout:frameLayout="None" layout:componentLayout="FunergyJournalStyle/result-actions" layout:eventLayout="FunergyJournalStyle/result-event">
+          <layout:Event event="av1#scr3#gctu2#oslte3" eventType="OnSelectEvent"/>
+        </layout:Component>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Events>
+    <BackEvent id="av1#scr3#bke3">
+      <NavigationFlow id="av1#scr3#bke3#nf9" to="av1#scr1" automaticCoupling="true"/>
+    </BackEvent>
+  </Events>
+</Screen>

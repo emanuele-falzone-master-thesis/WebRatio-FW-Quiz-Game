@@ -1,0 +1,86 @@
+<ActionDefinition xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="tlads0#ad3" name="Random Question" defaultSuccessPortDefinition="tlads0#ad3#spd3" defaultErrorPortDefinition="tlads0#ad3#epd3">
+  <Operations>
+    <RestfulRequestResponse id="tlads0#ad3#rfrr3" name="getNextQuestion" gr:x="345" gr:y="-55" requestMethod="GET" requestContentType="JSON" responseContentType="json" endpointURL="http://funergy.ifmledit.org/funergy/Services/ffv/getNextQuestion">
+      <RequestParameter id="tlads0#ad3#rfrr3#rrp2" name="language" isArray="false" jsonType="string"/>
+      <ResponseParameter id="tlads0#ad3#rfrr3#rrsp3" name="response" jsonType="string">
+        <SimpleParameterFragment id="tlads0#ad3#rfrr3#rrsp3#spf11" name="wrong" jsonType="string"/>
+        <SimpleParameterFragment id="tlads0#ad3#rfrr3#rrsp3#spf12" name="explaination" jsonType="string"/>
+        <SimpleParameterFragment id="tlads0#ad3#rfrr3#rrsp3#spf13" name="content" jsonType="string"/>
+        <SimpleParameterFragment id="tlads0#ad3#rfrr3#rrsp3#spf14" name="correct" jsonType="string"/>
+        <SimpleParameterFragment id="tlads0#ad3#rfrr3#rrsp3#spf15" name="oid" jsonType="string"/>
+      </ResponseParameter>
+      <RequestParameter id="tlads0#ad3#rfrr3#rrp3" name="level" isArray="false" jsonType="string"/>
+      <RequestParameter id="tlads0#ad3#rfrr3#rrp4" name="oid" isArray="false" jsonType="string" value="0"/>
+      <ErrorFlow id="tlads0#ad3#rfrr3#ef1" to="tlads0#ad3#epd3" automaticCoupling="true"/>
+      <SuccessFlow id="tlads0#ad3#rfrr3#sf48" to="tlads0#ad3#act11">
+        <ParameterBinding id="tlads0#ad3#rfrr3#sf48#par44" source="tlads0#ad3#rfrr3#rrsp3#spf13" target="tlads0#ad3#act11.tlads0#ad8#ipd8#pdp12" name="response/content - content"/>
+        <ParameterBinding id="tlads0#ad3#rfrr3#sf48#par45" source="tlads0#ad3#rfrr3#rrsp3#spf14" target="tlads0#ad3#act11.tlads0#ad8#ipd8#pdp17" name="response/correct - correct"/>
+        <ParameterBinding id="tlads0#ad3#rfrr3#sf48#par46" source="tlads0#ad3#rfrr3#rrsp3#spf12" target="tlads0#ad3#act11.tlads0#ad8#ipd8#pdp13" name="response/explaination - explanation"/>
+        <ParameterBinding id="tlads0#ad3#rfrr3#sf48#par47" sourceValue="en" target="tlads0#ad3#act11.tlads0#ad8#ipd8#pdp14" name="&quot;en&quot; - language"/>
+        <ParameterBinding id="tlads0#ad3#rfrr3#sf48#par48" source="tlads0#ad3#rfrr3#rrsp3#spf15" target="tlads0#ad3#act11.tlads0#ad8#ipd8#pdp15" name="response/oid - question_id"/>
+        <ParameterBinding id="tlads0#ad3#rfrr3#sf48#par49" source="tlads0#ad3#rfrr3#rrsp3#spf11" target="tlads0#ad3#act11.tlads0#ad8#ipd8#pdp16" name="response/wrong - wrong"/>
+      </SuccessFlow>
+      <DataFlow id="tlads0#ad3#rfrr3#df12" to="tlads0#ad3#act12">
+        <ParameterBinding id="tlads0#ad3#rfrr3#df12#par61" source="tlads0#ad3#rfrr3#rrsp3#spf15" target="tlads0#ad3#act12.tlads0#ad10#ipd10#pdp21" name="response/oid - question_id"/>
+      </DataFlow>
+      <DataFlow id="tlads0#ad3#rfrr3#df14" to="tlads0#ad3#spd3" gr:bendpoints="65.0 -141.0">
+        <ParameterBinding id="tlads0#ad3#rfrr3#df14#par62" source="tlads0#ad3#rfrr3#rrsp3#spf15" target="tlads0#ad3#spd3#pdp5" name="response/oid - question_id"/>
+      </DataFlow>
+    </RestfulRequestResponse>
+  </Operations>
+  <InputPortDefinition id="tlads0#ad3#ipd3" gr:x="0" gr:y="-140">
+    <SuccessFlow id="tlads0#ad3#ipd3#sf45" to="tlads0#ad3#act10" automaticCoupling="true"/>
+  </InputPortDefinition>
+  <SuccessPortDefinition id="tlads0#ad3#spd3" name="Success Port" gr:x="0" gr:y="-310">
+    <PortDefinitionParameter id="tlads0#ad3#spd3#pdp4" name="oid"/>
+    <PortDefinitionParameter id="tlads0#ad3#spd3#pdp5" name="question_id"/>
+  </SuccessPortDefinition>
+  <ErrorPortDefinition id="tlads0#ad3#epd3" name="Error Port" gr:x="0" gr:y="260"/>
+  <Action id="tlads0#ad3#act7" gr:x="125" gr:y="120" definition="tlads0#ad6">
+    <Events>
+      <SuccessEvent id="tlads0#ad3#act7#scce7" definition="tlads0#ad6#spd6">
+        <SuccessFlow id="tlads0#ad3#act7#scce7#sf47" to="tlads0#ad3#rfrr3">
+          <ParameterBinding id="tlads0#ad3#act7#scce7#sf47#par50" target="tlads0#ad3#rfrr3#rrp2" name="&quot;en&quot; - language" source="tlads0#ad6#spd6#pdp2d"/>
+          <ParameterBinding id="tlads0#ad3#act7#scce7#sf47#par51" source="tlads0#ad6#spd6#pdp1" target="tlads0#ad3#rfrr3#rrp3" name="level - level"/>
+          <ParameterBinding id="tlads0#ad3#act7#scce7#sf47#par52" source="tlads0#ad6#spd6#pdp2" target="tlads0#ad3#rfrr3#rrp4" name="oid - oid"/>
+        </SuccessFlow>
+      </SuccessEvent>
+      <ErrorEvent id="tlads0#ad3#act7#erre7" definition="tlads0#ad6#epd6">
+        <ErrorFlow id="tlads0#ad3#act7#erre7#ef22" to="tlads0#ad3#epd3" automaticCoupling="true"/>
+      </ErrorEvent>
+    </Events>
+  </Action>
+  <Action id="tlads0#ad3#act10" gr:x="0" gr:y="275" definition="tlads0#ad7">
+    <Events>
+      <SuccessEvent id="tlads0#ad3#act10#scce10" definition="tlads0#ad7#spd7">
+        <SuccessFlow id="tlads0#ad3#act10#scce10#sf46" to="tlads0#ad3#act7" automaticCoupling="true"/>
+      </SuccessEvent>
+      <ErrorEvent id="tlads0#ad3#act10#erre10" definition="tlads0#ad7#epd7">
+        <ErrorFlow id="tlads0#ad3#act10#erre10#ef21" to="tlads0#ad3#epd3" automaticCoupling="true"/>
+      </ErrorEvent>
+    </Events>
+  </Action>
+  <Action id="tlads0#ad3#act11" gr:x="690" gr:y="5" definition="tlads0#ad8">
+    <Events>
+      <SuccessEvent id="tlads0#ad3#act11#scce11" definition="tlads0#ad8#spd8" gr:pinned="true" gr:side="0" gr:pos="1">
+        <SuccessFlow id="tlads0#ad3#act11#scce11#sf50" to="tlads0#ad3#act12" automaticCoupling="true"/>
+        <DataFlow id="tlads0#ad3#act11#scce11#df15" to="tlads0#ad3#spd3">
+          <ParameterBinding id="tlads0#ad3#act11#scce11#df15#par63" source="tlads0#ad8#spd8#pdp18" target="tlads0#ad3#spd3#pdp4" name="oid - oid"/>
+        </DataFlow>
+      </SuccessEvent>
+      <ErrorEvent id="tlads0#ad3#act11#erre11" definition="tlads0#ad8#epd8">
+        <ErrorFlow id="tlads0#ad3#act11#erre11#ef23" to="tlads0#ad3#epd3" automaticCoupling="true"/>
+      </ErrorEvent>
+    </Events>
+  </Action>
+  <Action id="tlads0#ad3#act12" gr:x="800" gr:y="-160" definition="tlads0#ad10">
+    <Events>
+      <SuccessEvent id="tlads0#ad3#act12#scce12" definition="tlads0#ad10#spd10">
+        <SuccessFlow id="tlads0#ad3#act12#scce12#sf51" to="tlads0#ad3#spd3" automaticCoupling="true"/>
+      </SuccessEvent>
+      <ErrorEvent id="tlads0#ad3#act12#erre12" definition="tlads0#ad10#epd10" gr:pinned="true" gr:side="4" gr:pos="6">
+        <ErrorFlow id="tlads0#ad3#act12#erre12#ef24" to="tlads0#ad3#epd3" automaticCoupling="true"/>
+      </ErrorEvent>
+    </Events>
+  </Action>
+</ActionDefinition>

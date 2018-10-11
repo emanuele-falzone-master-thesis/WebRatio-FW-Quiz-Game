@@ -1,0 +1,23 @@
+<ActionDefinition xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="tlads0#ad7" name="Clear Database" defaultSuccessPortDefinition="tlads0#ad7#spd7" defaultErrorPortDefinition="tlads0#ad7#epd7">
+  <Operations>
+    <Delete id="tlads0#ad7#dlu3" name="Delete Answers" gr:x="265" gr:y="5" dataBinding="cls9">
+      <ConditionalExpression id="tlads0#ad7#dlu3#sc3" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="tlads0#ad7#dlu3#sc3#acond1" name="all" predicate="neq" booleanOperator="and" implied="false" attributes="cls9#att11" value="-1" ignoreCase="false"/>
+      </ConditionalExpression>
+      <SuccessFlow id="tlads0#ad7#dlu3#sf25" to="tlads0#ad7#spd7" automaticCoupling="true"/>
+      <ErrorFlow id="tlads0#ad7#dlu3#ef12" to="tlads0#ad7#epd7" automaticCoupling="true"/>
+    </Delete>
+    <Delete id="tlads0#ad7#dlu5" name="Delete Question" gr:x="60" gr:y="5" dataBinding="cls8">
+      <ConditionalExpression id="tlads0#ad7#dlu5#sc6" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="tlads0#ad7#dlu5#sc6#acond5" name="all" predicate="neq" booleanOperator="and" implied="false" attributes="cls8#att4" value="-1"/>
+      </ConditionalExpression>
+      <SuccessFlow id="tlads0#ad7#dlu5#sf18" to="tlads0#ad7#dlu3" automaticCoupling="true"/>
+      <ErrorFlow id="tlads0#ad7#dlu5#ef10" to="tlads0#ad7#epd7" automaticCoupling="true"/>
+    </Delete>
+  </Operations>
+  <InputPortDefinition id="tlads0#ad7#ipd7" gr:x="0" gr:y="30">
+    <SuccessFlow id="tlads0#ad7#ipd7#sf19" to="tlads0#ad7#dlu5" automaticCoupling="true"/>
+  </InputPortDefinition>
+  <SuccessPortDefinition id="tlads0#ad7#spd7" name="Success Port" gr:x="0" gr:y="30"/>
+  <ErrorPortDefinition id="tlads0#ad7#epd7" name="Error Port" gr:x="0" gr:y="145"/>
+</ActionDefinition>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle>
+  <Entry key="Back">Indietro</Entry>
+  <Entry key="Continue">Continua</Entry>
+  <Entry key="Explanation">Spiegazione</Entry>
+  <Entry key="Save">Salva</Entry>
+  <Entry key="Settings">Impostazioni</Entry>
+  <Entry key="Single Player">Giocatore Singolo</Entry>
+</Bundle>

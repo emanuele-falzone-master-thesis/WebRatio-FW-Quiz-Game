@@ -1,0 +1,47 @@
+<ActionDefinition xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="tlads0#ad8" name="Create New Question" defaultSuccessPortDefinition="tlads0#ad8#spd8" defaultErrorPortDefinition="tlads0#ad8#epd8">
+  <Operations>
+    <Create id="tlads0#ad8#cru4" name="Create Question" gr:x="-100" gr:y="245" dataBinding="cls8">
+      <SuccessFlow id="tlads0#ad8#cru4#sf26" to="tlads0#ad8#cru8" automaticCoupling="true"/>
+      <DataFlow id="tlads0#ad8#cru4#df7" to="tlads0#ad8#spd8" gr:bendpoints="497.0 -139.0">
+        <ParameterBinding id="tlads0#ad8#cru4#df7#par37" source="cls8#att4" target="tlads0#ad8#spd8#pdp18" name="oid - oid"/>
+      </DataFlow>
+      <ErrorFlow id="tlads0#ad8#cru4#ef13" to="tlads0#ad8#epd8" automaticCoupling="true"/>
+    </Create>
+    <Create id="tlads0#ad8#cru7" name="Create Wrong Answer" gr:x="350" gr:y="10" dataBinding="cls9">
+      <SuccessFlow id="tlads0#ad8#cru7#sf35" to="tlads0#ad8#spd8" automaticCoupling="true"/>
+      <ErrorFlow id="tlads0#ad8#cru7#ef15" to="tlads0#ad8#epd8" automaticCoupling="true"/>
+    </Create>
+    <Create id="tlads0#ad8#cru8" name="Create Correct Answer" gr:x="115" gr:y="135" dataBinding="cls9">
+      <SuccessFlow id="tlads0#ad8#cru8#sf33" to="tlads0#ad8#cru7" automaticCoupling="true"/>
+      <ErrorFlow id="tlads0#ad8#cru8#ef14" to="tlads0#ad8#epd8" automaticCoupling="true"/>
+    </Create>
+  </Operations>
+  <InputPortDefinition id="tlads0#ad8#ipd8" gr:x="0" gr:y="30">
+    <SuccessFlow id="tlads0#ad8#ipd8#sf34" to="tlads0#ad8#cru4">
+      <ParameterBinding id="tlads0#ad8#ipd8#sf34#par26" source="tlads0#ad8#ipd8#pdp12" target="cls8#att9" name="content - content"/>
+      <ParameterBinding id="tlads0#ad8#ipd8#sf34#par27" source="tlads0#ad8#ipd8#pdp13" target="cls8#att6" name="explanation - explanation"/>
+      <ParameterBinding id="tlads0#ad8#ipd8#sf34#par28" source="tlads0#ad8#ipd8#pdp14" target="cls8#att7" name="language - language"/>
+      <ParameterBinding id="tlads0#ad8#ipd8#sf34#par29" source="tlads0#ad8#ipd8#pdp15" target="cls8#att10" name="question_id - question_id"/>
+    </SuccessFlow>
+    <PortDefinitionParameter id="tlads0#ad8#ipd8#pdp12" name="content"/>
+    <PortDefinitionParameter id="tlads0#ad8#ipd8#pdp13" name="explanation"/>
+    <PortDefinitionParameter id="tlads0#ad8#ipd8#pdp14" name="language"/>
+    <PortDefinitionParameter id="tlads0#ad8#ipd8#pdp15" name="question_id"/>
+    <PortDefinitionParameter id="tlads0#ad8#ipd8#pdp16" name="wrong"/>
+    <PortDefinitionParameter id="tlads0#ad8#ipd8#pdp17" name="correct"/>
+    <DataFlow id="tlads0#ad8#ipd8#df5" to="tlads0#ad8#cru8" gr:bendpoints="102.0 168.0">
+      <ParameterBinding id="tlads0#ad8#ipd8#df5#par30" source="tlads0#ad8#ipd8#pdp17" target="cls9#att14" name="correct - content"/>
+      <ParameterBinding id="tlads0#ad8#ipd8#df5#par31" sourceValue="true" target="cls9#att13" name="&quot;true&quot; - correctness"/>
+      <ParameterBinding id="tlads0#ad8#ipd8#df5#par32" source="tlads0#ad8#ipd8#pdp15" target="cls9#att12" name="question_id - question_id"/>
+    </DataFlow>
+    <DataFlow id="tlads0#ad8#ipd8#df6" to="tlads0#ad8#cru7">
+      <ParameterBinding id="tlads0#ad8#ipd8#df6#par33" source="tlads0#ad8#ipd8#pdp16" target="cls9#att14" name="wrong - content"/>
+      <ParameterBinding id="tlads0#ad8#ipd8#df6#par34" sourceValue="false" target="cls9#att13" name="&quot;false&quot; - correctness"/>
+      <ParameterBinding id="tlads0#ad8#ipd8#df6#par35" source="tlads0#ad8#ipd8#pdp15" target="cls9#att12" name="question_id - question_id"/>
+    </DataFlow>
+  </InputPortDefinition>
+  <SuccessPortDefinition id="tlads0#ad8#spd8" name="Success Port" gr:x="0" gr:y="30">
+    <PortDefinitionParameter id="tlads0#ad8#spd8#pdp18" name="oid"/>
+  </SuccessPortDefinition>
+  <ErrorPortDefinition id="tlads0#ad8#epd8" name="Error Port" gr:x="0" gr:y="300"/>
+</ActionDefinition>
